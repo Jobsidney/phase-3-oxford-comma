@@ -1,18 +1,14 @@
 def oxford_comma(array)
-    if array.length==1
-        array.join(" ")
-    elsif array.length==2
+    if array.length==2
         changed=array[-1]
-        neww=array
-        neww[-1]="and #{changed}"
-        neww.join(" ")
+        array[-1]="and #{changed}"
+        array.join(" ")
     elsif array.length>2
         changed=array[-1]
-        neww=array
-        neww[-1]="and #{changed}"
-        neww.join(", ")
+        array[-1]="and #{changed}"
+        array.join(", ")
     else
-       
+        array.join(" ")
     end
 end
 
